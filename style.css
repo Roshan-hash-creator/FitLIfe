@@ -10,6 +10,7 @@
   --color-black: #000;
   --color-black-light: #211a1a;
   --color-white-light: #8e8e8e;
+  --color-white-para: #ebebebf0;
 }
 body {
   font-family: "Lato", sans-serif;
@@ -89,7 +90,7 @@ nav {
 .banner {
   position: relative;
   height: 650px;
-  background-image: url("Source/FitLife_banner.png");
+  background-image: url("/Source/FitLife_banner.png");
   background-size: cover;
   background-position: center;
 }
@@ -337,6 +338,16 @@ nav {
   margin-right: 25px;
   margin-left: 0;
 }
+.lrn_more {
+  background-color: transparent !important;
+  color: #000 !important;
+  outline: 2px solid var(--secondary-color) !important;
+}
+.lrn_more:hover {
+  background-color: var(--secondary-color) !important;
+  color: var(--color-white) !important;
+  border-radius: 20px !important;
+}
 
 .trainer-signature img {
   max-width: 100px;
@@ -365,62 +376,116 @@ nav {
 }
 
 .footer_container {
-  row-gap: 3.5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: start;
+  row-gap: 1.5rem;
 }
 
 .footer_bg {
   background-color: var(--secondary-color);
-  padding: 2rem 0 3rem;
+  padding: 3rem 0 2rem;
+}
+.footer_logo {
+  width: 25%;
+}
+.footer_logo > p {
+  margin-top: 1.5rem;
+  letter-spacing: 0.1px;
 }
 
 .footer_title {
-  font-size: 1.5rem;
-  margin-bottom: .25rem;
+  font-size: 1.2rem;
+  margin-bottom: 0.25rem;
+  font-family: "Roboto", sans-serif;
 }
-
-.footer_subtitle {
-  font-size: .813rem;
+.links {
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+  align-items: start;
 }
-
 .footer_links {
   display: flex;
   flex-direction: column;
-  row-gap: 1.5rem;
+  row-gap: 1rem;
+  list-style-type: none;
+}
+.footer_links:hover {
+  color: hsl(250, 92%, 85%);
 }
 
-.footer_links:hover {
-  color: hsl(250,92%,85%);
+.footer_links li a,
+.footer_logo > p {
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: var(--color-white-para);
+}
+.footer_links li a:hover {
+  text-decoration: underline;
 }
 
 .footer_social {
   font-size: 1.25rem;
-  margin-right: 1.5rem;
+  margin-right: 1rem;
+  color: black;
 }
-
-.footer_social:hover {
-  color: hsl(250,92%,85%);
+.footer_mail {
+  margin: 1.2rem 0;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--color-white-para);
+  color: var(--color-white);
+  padding: 5px 0;
+  width: 60%;
+}
+::placeholder {
+  color: var(--color-white);
+}
+input[type="email"]:focus {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid var(--color-white-para);
+}
+.social {
+  margin: 20px 0px;
+}
+.social a i {
+  background-color: var(--color-white);
+  padding: 5px;
+  border-radius: 50%;
 }
 
 .footer_copy {
-  font-size: .75rem;
+  font-size: 0.75rem;
   text-align: center;
   color: hsl(250, 8%, 65%);
-  margin-top: 3rem;
+  margin-top: 2rem;
+}
+.whatsapp > i {
+  color: #25d366 !important;
+}
+.facebook > i {
+  color: #3b5998;
+}
+.twitter > i {
+  color: #00acee;
+}
+.instagram > i {
+  color: #8a3ab9;
+}
+.hr_line {
+  margin: 40px 70px 0 54px;
 }
 
 .footer_title,
-.footer_subtitle,
 .footer_link,
-.footer_social,
 .footer_copy {
-  color: #fff;
+  color: var(--color-white);
 }
+.sign {
+  color: #ffca00;
+  text-decoration: underline;
+}
+
 /* footer end*/
-
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .price-plan-grid {
-    grid-template-columns: 1fr;
-  }
-}
